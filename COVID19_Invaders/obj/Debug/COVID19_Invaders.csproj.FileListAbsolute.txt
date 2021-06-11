@@ -74,3 +74,8 @@ C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19
 C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.exe
 C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.pdb
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\bin\Debug\Interop.WMPLib.dll
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\Interop.WMPLib.dll
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csproj.ResolveComReference.cache

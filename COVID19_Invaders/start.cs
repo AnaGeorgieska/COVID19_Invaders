@@ -12,8 +12,10 @@ namespace COVID19_Invaders
 {
     public partial class start : Form
     {
+
         public start()
         {
+        
             InitializeComponent();
             label1.BackColor = Color.Transparent;
             label1.ForeColor = Color.White;

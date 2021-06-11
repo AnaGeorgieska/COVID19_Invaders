@@ -34,7 +34,9 @@ namespace COVID19_Invaders
             this.txtScore = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pbPause = new System.Windows.Forms.PictureBox();
+            this.pbMusic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPause)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -69,12 +71,23 @@ namespace COVID19_Invaders
             this.pbPause.TabStop = false;
             this.pbPause.Click += new System.EventHandler(this.pbPause_Click);
             // 
+            // pbMusic
+            // 
+            this.pbMusic.Image = global::COVID19_Invaders.Properties.Resources.music;
+            this.pbMusic.Location = new System.Drawing.Point(535, 812);
+            this.pbMusic.Name = "pbMusic";
+            this.pbMusic.Size = new System.Drawing.Size(35, 33);
+            this.pbMusic.TabIndex = 3;
+            this.pbMusic.TabStop = false;
+            this.pbMusic.Click += new System.EventHandler(this.pbMusic_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::COVID19_Invaders.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1484, 854);
+            this.Controls.Add(this.pbMusic);
             this.Controls.Add(this.pbPause);
             this.Controls.Add(this.txtScore);
             this.Name = "Form1";
@@ -84,6 +97,7 @@ namespace COVID19_Invaders
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pbPause)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,6 +108,7 @@ namespace COVID19_Invaders
         private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pbPause;
+        private System.Windows.Forms.PictureBox pbMusic;
     }
 }
 
