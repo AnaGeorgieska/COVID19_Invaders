@@ -127,6 +127,8 @@
     <Content Include="Resources\sadFace2.png" />
     <Content Include="Resources\sadFace21.png" />
     <Content Include="Resources\sadFace3.png" />
+    <Content Include="Resources\sadFaceBig.png" />
+    <Content Include="Resources\sadFaceBig2.png" />
     <Content Include="Resources\start.png" />
     <None Include="Resources\start1.png" />
     <Content Include="Resources\startBackgr.jpg" />

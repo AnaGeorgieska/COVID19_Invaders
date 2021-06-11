@@ -64,21 +64,35 @@ namespace COVID19_Invaders
             sadInvaders = new List<Invader>();
             int left = 0;
             int top = 5;
-            for (int i = 0; i < 50; i++)
+            if(level<=3)
             {
-                Image img = null;
-                if (level == 1) img = Properties.Resources.sadFace;
-                else if (level == 2) img = Properties.Resources.sadFace21;
-                else img = Properties.Resources.sadFace31;
-                if(level==3)
+                for (int i = 0; i < 50; i++)
                 {
-                    left = random.Next(form.Width*2)-form.Width;
-                    top = -random.Next(form.Height);
+                    Image img = null;
+                    if (level == 1) img = Properties.Resources.sadFace;
+                    else if (level == 2) img = Properties.Resources.sadFace21;
+                    else img = Properties.Resources.sadFace31;
+                    if (level == 3)
+                    {
+                        left = random.Next(form.Width * 2) - form.Width;
+                        top = -random.Next(form.Height);
+                    }
+                    Invader temp = new Invader(60, 50, top, left, img);
+                    sadInvaders.Add(temp);
+                    left = left - 80;
                 }
-                Invader temp = new Invader(60, 50, top, left, img);
-                sadInvaders.Add(temp);
-                left = left - 80;
             }
+            else
+            {
+                Invader temp = new Invader(200, 200, 0, 100, Properties.Resources.sadFaceBig);
+                sadInvaders.Add(temp);
+                if(level==5)
+                {
+                    Invader temp2 = new Invader(200, 200, 0, 600, Properties.Resources.sadFaceBig2);
+                    sadInvaders.Add(temp2);
+                }
+            }
+            
         }
         public void keyDown( KeyEventArgs e)
         {
@@ -109,22 +123,26 @@ namespace COVID19_Invaders
             if (player2 != null)
                 player2.movePlayer();
             if(level==3 && sadInvaders.Count<1)
-                form.gameOver("Happiness Found, Keep it safe!");
+            {
+                //  form.gameOver("Happiness Found, Keep it safe!");
+                form.nextLevelForm();
+            }
+               
             moveEnemy();
             moveBullet();
             addCovidBullet();
             moveEnemyBullet();
             moveLives();
             movePowers();
-            if (score == 10)
+            if (score == 10 && level<4)
             {
                 Invader.enemySpeed = 8 + 2 * level;
             }
-            if (score == 50 && level == 3)
+            if (score == 100 && level == 5)
             {
                 form.gameOver("Happiness Found, Keep it safe!");
             }
-            else if (score == 50)
+            else if (score == 50 && level<5)
             {
                 form.nextLevelForm();
             }
@@ -212,8 +230,8 @@ namespace COVID19_Invaders
             int temp = random.Next(sadInvaders.Count * (8 - level));
             if (temp < sadInvaders.Count && sadInvaders[temp].pictureBox.Location.X > 0)
             {
-                InvaderBullet invaderBullet = new InvaderBullet(30, 30, sadInvaders[temp].pictureBox.Location.Y,
-                    sadInvaders[temp].pictureBox.Location.X + sadInvaders[temp].pictureBox.Width, Properties.Resources.covidBullet);
+                InvaderBullet invaderBullet = new InvaderBullet(30, 30,sadInvaders[temp].pictureBox.Location.Y+sadInvaders[temp].pictureBox.Height,
+                    sadInvaders[temp].pictureBox.Location.X + random.Next(sadInvaders[temp].pictureBox.Width), Properties.Resources.covidBullet);
                 sadInvadersBullets.Add(invaderBullet);
             }
         }
@@ -231,41 +249,70 @@ namespace COVID19_Invaders
         }
         private void moveEnemy()
         {
-            for (int i = 0; i < sadInvaders.Count; i++)
+            for (int i=sadInvaders.Count-1; i >=0 ; i--)
             {
-                sadInvaders[i].moveInvader(form.Width);
-                if (sadInvaders[i].pictureBox.Top > form.Height)
+                if (level < 4)
                 {
-                    sadInvaders.Remove(sadInvaders[i]);
-                    --i;
-                }
-                else { 
-                enemyIntersectsPlayer(sadInvaders[i].pictureBox, player1);
-                enemyIntersectsPlayer(sadInvaders[i].pictureBox, player2);
+                    sadInvaders[i].moveInvader(form.Width);
+                    if (sadInvaders[i].pictureBox.Top > form.Height)
+                    {
+                        sadInvaders.Remove(sadInvaders[i]);
+                        i--;
+                       break;
+                    }
+                    else
+                    {
+                        if (player1 != null)
+                        {
+                            if (sadInvaders[i].pictureBox.Bounds.IntersectsWith(player1.pictureBox.Bounds))
+                            {
+                                player1 = null;
+                            }
+                        }
+                        if (player2 != null)
+                        {
+                            if (sadInvaders[i].pictureBox.Bounds.IntersectsWith(player2.pictureBox.Bounds))
+                            {
+                                player2 = null;
+                            }
+                        }
+                    }
 
-                for (int j = 0; j < bullets.Count; j++)
+                }
+                for (int j = bullets.Count-1; j >=0; j--)
                 {
                     if (bullets[j].pictureBox.Bounds.IntersectsWith(sadInvaders[i].pictureBox.Bounds))
                     {
-                        sadInvaders.Remove(sadInvaders[i]);
                         bullets.Remove(bullets[j]);
-                        --i;
+                        if (level < 4)
+                        {
+                            sadInvaders.Remove(sadInvaders[i]);
+                        }
+                        else
+                        {
+                            --sadInvaders[i].strength;
+                            if (sadInvaders[i].strength == 0)
+                                sadInvaders.Remove(sadInvaders[i]);
+                        }
                         score += 1;
                         break;
                     }
                 }
+            }
+            if (level > 3 && sadInvaders.Count > 0)
+            {
+                if (sadInvaders.Count > 1)
+                {
+                    sadInvaders[0].moveInvaderBig();
+                    sadInvaders[1].moveInvaderBig();
                 }
-                
+                else
+                {
+                    sadInvaders[0].moveInvaderBig();
+                }
             }
         }
-        public void enemyIntersectsPlayer(PictureBox enemy, Player player)
-        {
-            if (player != null)
-                if (enemy.Bounds.IntersectsWith(player.pictureBox.Bounds))
-                {
-                    player = null;
-                }
-        }
+      
         
         public void dontMove()
         {

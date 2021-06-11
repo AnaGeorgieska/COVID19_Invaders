@@ -61,3 +61,16 @@ C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debu
 C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.exe
 C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.pdb
 C:\Users\User\Desktop\COVID19_Invaders\COVID19_Invaders\obj\Debug\COVID19_Invaders.start.resources
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\bin\Debug\COVID19_Invaders.exe.config
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\bin\Debug\COVID19_Invaders.exe
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\bin\Debug\COVID19_Invaders.pdb
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csprojAssemblyReference.cache
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.Form1.resources
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.gameOver.resources
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.nextLevel.resources
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.Properties.Resources.resources
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.start.resources
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csproj.GenerateResource.cache
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.exe
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.pdb
