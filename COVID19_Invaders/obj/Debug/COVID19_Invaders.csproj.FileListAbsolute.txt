@@ -60,3 +60,4 @@ C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debu
 C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.exe
 C:\Users\User\Desktop\COVID19_Invaders -2Players- Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.pdb
+C:\Users\User\Desktop\COVID19_Invaders\COVID19_Invaders\obj\Debug\COVID19_Invaders.start.resources

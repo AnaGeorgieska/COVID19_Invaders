@@ -12,7 +12,6 @@ namespace COVID19_Invaders
     {
         public int score { get; set; }
         public static int level { get; set; }
-
         public static Random random = new Random();
         public List<Invader> sadInvaders { get; set; }
         public List<InvaderBullet> sadInvadersBullets { get; set; }
@@ -64,13 +63,19 @@ namespace COVID19_Invaders
         {
             sadInvaders = new List<Invader>();
             int left = 0;
+            int top = 5;
             for (int i = 0; i < 50; i++)
             {
                 Image img = null;
                 if (level == 1) img = Properties.Resources.sadFace;
                 else if (level == 2) img = Properties.Resources.sadFace21;
                 else img = Properties.Resources.sadFace31;
-                Invader temp = new Invader(60, 50, 5, left, img);
+                if(level==3)
+                {
+                    left = random.Next(form.Width*2)-form.Width;
+                    top = -random.Next(form.Height);
+                }
+                Invader temp = new Invader(60, 50, top, left, img);
                 sadInvaders.Add(temp);
                 left = left - 80;
             }
@@ -103,6 +108,8 @@ namespace COVID19_Invaders
                 player1.movePlayer();
             if (player2 != null)
                 player2.movePlayer();
+            if(level==3 && sadInvaders.Count<1)
+                form.gameOver("Happiness Found, Keep it safe!");
             moveEnemy();
             moveBullet();
             addCovidBullet();
@@ -227,8 +234,15 @@ namespace COVID19_Invaders
             for (int i = 0; i < sadInvaders.Count; i++)
             {
                 sadInvaders[i].moveInvader(form.Width);
+                if (sadInvaders[i].pictureBox.Top > form.Height)
+                {
+                    sadInvaders.Remove(sadInvaders[i]);
+                    --i;
+                }
+                else { 
                 enemyIntersectsPlayer(sadInvaders[i].pictureBox, player1);
                 enemyIntersectsPlayer(sadInvaders[i].pictureBox, player2);
+
                 for (int j = 0; j < bullets.Count; j++)
                 {
                     if (bullets[j].pictureBox.Bounds.IntersectsWith(sadInvaders[i].pictureBox.Bounds))
@@ -240,6 +254,8 @@ namespace COVID19_Invaders
                         break;
                     }
                 }
+                }
+                
             }
         }
         public void enemyIntersectsPlayer(PictureBox enemy, Player player)

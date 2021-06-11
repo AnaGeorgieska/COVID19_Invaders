@@ -40,12 +40,22 @@ namespace COVID19_Invaders
         }
         public void moveInvader(int width)
         {
-            this.pictureBox.Left += enemySpeed;
-            if (this.pictureBox.Left > width)
+            if(Scene.level==3)
             {
-                this.pictureBox.Top += (Scene.level * 20) + 45;
-                this.pictureBox.Left = -80;
+                this.pictureBox.Left += enemySpeed/2;
+                this.pictureBox.Top += enemySpeed/2;
             }
+
+            if(Scene.level!=3)
+            {
+                this.pictureBox.Left += enemySpeed;
+                if (this.pictureBox.Left > width)
+                {
+                    this.pictureBox.Top += (Scene.level * 20) + 45;
+                    this.pictureBox.Left = -80;
+                }
+            }
+               
         }
         public void draw(Graphics g)
         {
