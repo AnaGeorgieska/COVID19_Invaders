@@ -23,7 +23,9 @@ namespace COVID19_Invaders
         }
         private void load()
         {
-            txtscore.Text = description;
+            label2.Text = description;
+            label2.BackColor = Color.Transparent;
+            txtscore.Text = string.Format("Your score: {0}", Scene.score);
             txtscore.BackColor = Color.Transparent;
         }
 

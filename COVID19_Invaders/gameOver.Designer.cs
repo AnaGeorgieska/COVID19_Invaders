@@ -33,12 +33,13 @@ namespace COVID19_Invaders
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtscore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPlayAgain
             // 
             this.btnPlayAgain.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(155, 128);
+            this.btnPlayAgain.Location = new System.Drawing.Point(155, 177);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(155, 42);
             this.btnPlayAgain.TabIndex = 0;
@@ -49,7 +50,7 @@ namespace COVID19_Invaders
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(155, 193);
+            this.btnClose.Location = new System.Drawing.Point(155, 237);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(155, 38);
             this.btnClose.TabIndex = 1;
@@ -69,18 +70,29 @@ namespace COVID19_Invaders
             // 
             this.txtscore.AutoSize = true;
             this.txtscore.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtscore.Location = new System.Drawing.Point(34, 49);
+            this.txtscore.Location = new System.Drawing.Point(139, 118);
             this.txtscore.Name = "txtscore";
             this.txtscore.Size = new System.Drawing.Size(77, 25);
             this.txtscore.TabIndex = 3;
             this.txtscore.Text = "label2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
             // 
             // gameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::COVID19_Invaders.Properties.Resources.gameOverBackgr;
-            this.ClientSize = new System.Drawing.Size(465, 271);
+            this.ClientSize = new System.Drawing.Size(465, 324);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtscore);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
@@ -101,5 +113,6 @@ namespace COVID19_Invaders
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtscore;
+        private System.Windows.Forms.Label label2;
     }
 }

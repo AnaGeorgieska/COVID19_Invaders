@@ -54,7 +54,7 @@ namespace COVID19_Invaders
         {
             Bullet bullet = new Bullet(7, 25, pictureBox.Top - 20, pictureBox.Left + this.pictureBox.Width / 2,
                Properties.Resources.bulletDrop2, bulletTag);
-            form.scene.bullets.Add(bullet);
+            form.scene.Level.bullets.Add(bullet);
         }
         public void keyDown(KeyEventArgs e)
         {

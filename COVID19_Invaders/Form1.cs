@@ -33,13 +33,14 @@ namespace COVID19_Invaders
             gameTimer.Start();
             timer1.Start();
             this.pause = false;
+            txtScore.ForeColor = Color.Transparent;
             pbPause.BackColor = Color.Transparent;
             pbPause.SizeMode = PictureBoxSizeMode.StretchImage;
             gameSetUp();
         }
         public void gameSetUp()
         {
-            scene.gameSetUp();
+            scene = new Scene(this.numPlayers, this);
             gameTimer.Start();
             timer1.Start();
             this.pause = false;
@@ -63,8 +64,8 @@ namespace COVID19_Invaders
         }
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            txtScore.Text = "Score: " + scene.score;
             scene.gameTimerTick();
+            txtScore.Text = "Score: " + Scene.score;
             Invalidate();
         }
        

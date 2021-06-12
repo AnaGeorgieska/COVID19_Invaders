@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigInvadersLevel.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -61,6 +62,8 @@
     </Compile>
     <Compile Include="Invader.cs" />
     <Compile Include="InvaderBullet.cs" />
+    <Compile Include="level.cs" />
+    <Compile Include="LittleInvadersLevel.cs" />
     <Compile Include="nextLevel.cs">
       <SubType>Form</SubType>
     </Compile>
