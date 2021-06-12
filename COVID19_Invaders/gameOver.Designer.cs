@@ -85,9 +85,11 @@ namespace COVID19_Invaders
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnPlayAgain);
+            this.KeyPreview = true;
             this.Name = "gameOver";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gameOver";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gameOver_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

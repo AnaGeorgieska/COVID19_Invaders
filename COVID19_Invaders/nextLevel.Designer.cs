@@ -75,9 +75,11 @@ namespace COVID19_Invaders
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnNextLevel);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "nextLevel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "nextLevel";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nextLevel_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
