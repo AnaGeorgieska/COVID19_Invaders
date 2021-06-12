@@ -32,6 +32,7 @@ namespace COVID19_Invaders
             this.label1 = new System.Windows.Forms.Label();
             this.btn1Player = new System.Windows.Forms.Button();
             this.btn2Player = new System.Windows.Forms.Button();
+            this.btnHowToPlay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,12 +67,24 @@ namespace COVID19_Invaders
             this.btn2Player.UseVisualStyleBackColor = true;
             this.btn2Player.Click += new System.EventHandler(this.btn2Player_Click);
             // 
+            // btnHowToPlay
+            // 
+            this.btnHowToPlay.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHowToPlay.Location = new System.Drawing.Point(152, 227);
+            this.btnHowToPlay.Name = "btnHowToPlay";
+            this.btnHowToPlay.Size = new System.Drawing.Size(225, 48);
+            this.btnHowToPlay.TabIndex = 3;
+            this.btnHowToPlay.Text = "HOW TO PLAY";
+            this.btnHowToPlay.UseVisualStyleBackColor = true;
+            this.btnHowToPlay.Click += new System.EventHandler(this.btnHowToPlay_Click);
+            // 
             // start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::COVID19_Invaders.Properties.Resources.startBackgr;
             this.ClientSize = new System.Drawing.Size(800, 399);
+            this.Controls.Add(this.btnHowToPlay);
             this.Controls.Add(this.btn2Player);
             this.Controls.Add(this.btn1Player);
             this.Controls.Add(this.label1);
@@ -88,5 +101,6 @@ namespace COVID19_Invaders
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn1Player;
         private System.Windows.Forms.Button btn2Player;
+        private System.Windows.Forms.Button btnHowToPlay;
     }
 }

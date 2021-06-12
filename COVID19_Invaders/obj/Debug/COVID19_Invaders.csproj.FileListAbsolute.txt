@@ -79,3 +79,4 @@ C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\bin\Debug\AxInter
 C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\Interop.WMPLib.dll
 C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.csproj.ResolveComReference.cache
+C:\Users\User\Desktop\COVID19_Invaders - Copy\COVID19_Invaders\obj\Debug\COVID19_Invaders.howToPlay.resources

@@ -34,5 +34,11 @@ namespace COVID19_Invaders
             form.Show();
           //  this.Close();
         }
+
+        private void btnHowToPlay_Click(object sender, EventArgs e)
+        {
+            howToPlay form = new howToPlay();
+            form.Show();
+        }
     }
 }
