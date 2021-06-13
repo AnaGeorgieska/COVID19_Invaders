@@ -60,8 +60,8 @@ namespace COVID19_Invaders
                         --sadInvaders[i].strength;
                             if (sadInvaders[i].strength == 0)
                                 sadInvaders.Remove(sadInvaders[i]);
-                        
-                        Scene.score += 1;
+
+                        form.scene.score.increment();
                         break;
                     }
                 }

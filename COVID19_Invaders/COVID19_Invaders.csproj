@@ -85,6 +85,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Scene.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="start.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -50,7 +50,7 @@ namespace COVID19_Invaders
             moveEnemyBullet();
             moveLives();
             movePowers();
-            if (Scene.score == 10 || Scene.score == 60 || Scene.score == 110)
+            if (form.scene.score.score == 10 || form.scene.score.score == 60 || form.scene.score.score == 110)
             {
                 Invader.enemySpeed = 8 + 2 * Scene.level;
             }
@@ -93,7 +93,7 @@ namespace COVID19_Invaders
                     {
                         bullets.Remove(bullets[j]);
                         sadInvaders.Remove(sadInvaders[i]);
-                        Scene.score += 1;
+                        form.scene.score.increment();
                         break;
                     }
                 }

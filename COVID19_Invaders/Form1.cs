@@ -65,7 +65,7 @@ namespace COVID19_Invaders
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             scene.gameTimerTick();
-            txtScore.Text = "Score: " + Scene.score;
+            txtScore.Text = "Score: " + scene.score.score;
             Invalidate();
         }
        

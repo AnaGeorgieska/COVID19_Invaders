@@ -70,7 +70,7 @@ namespace COVID19_Invaders
             // 
             this.txtscore.AutoSize = true;
             this.txtscore.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtscore.Location = new System.Drawing.Point(139, 118);
+            this.txtscore.Location = new System.Drawing.Point(141, 99);
             this.txtscore.Name = "txtscore";
             this.txtscore.Size = new System.Drawing.Size(77, 25);
             this.txtscore.TabIndex = 3;
@@ -80,11 +80,12 @@ namespace COVID19_Invaders
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 66);
+            this.label2.Location = new System.Drawing.Point(37, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // gameOver
             // 

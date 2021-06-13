@@ -10,7 +10,7 @@ namespace COVID19_Invaders
 {
    public class Scene
     {
-        public static int score { get; set; }
+        public Score score { get; set; }
         public static int level { get; set; }
         public Form1 form { get; set; }
         public level Level { get; set; }
@@ -26,7 +26,7 @@ namespace COVID19_Invaders
             if (numPlayers == 2)
                 player2 = new Player(2, form.Width, form.Height);
             level = 1;
-            score = 0;
+            score = new Score();
             Level = new LittleInvadersLevel(numPlayers, form, player1, player2);
             Level.makeInvaders();
         }
