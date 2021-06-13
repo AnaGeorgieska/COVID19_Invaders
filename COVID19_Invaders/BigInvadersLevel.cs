@@ -52,7 +52,6 @@ namespace COVID19_Invaders
         {
             for (int i = sadInvaders.Count - 1; i >= 0; i--)
             {
-                
                 for (int j = bullets.Count - 1; j >= 0; j--)
                 {
                     if (bullets[j].pictureBox.Bounds.IntersectsWith(sadInvaders[i].pictureBox.Bounds))

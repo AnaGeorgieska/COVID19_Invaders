@@ -10,16 +10,16 @@ namespace COVID19_Invaders
 {
    public abstract class level
     {
-        public static Random random = new Random();
-        public List<Invader> sadInvaders { get; set; }
-        public List<InvaderBullet> sadInvadersBullets { get; set; }
-        public List<PictureBox> livesList { get; set; }
-        public List<Bullet> bullets { get; set; }
-        public List<PictureBox> powerList { get; set; }
-        public Form1 form { get; set; }
-        public int numPlayers { get; set; }
-        public Player player1 { get; set; }
-        public Player player2 { get; set; }
+        public List<Invader> sadInvaders { get; set; } //листа со ковид напаѓачи
+        public List<InvaderBullet> sadInvadersBullets { get; set; } //листа со ковид оружје
+        public List<PictureBox> livesList { get; set; } //листа со бонус животи
+        public List<Bullet> bullets { get; set; } //листа со капки вакцина
+        public List<PictureBox> powerList { get; set; } //листа со бонус моќ
+        public Form1 form { get; set; } //форма за приказ
+        public static Random random = new Random(); //променлива за генерирање рандом број
+        public int numPlayers { get; set; } //број на играчи
+        public Player player1 { get; set; } //прв играч
+        public Player player2 { get; set; } //втор играч
         public level(int numPlayers, Form1 form, Player player1, Player player2)
         {
             this.form = form;
@@ -39,22 +39,68 @@ namespace COVID19_Invaders
         {
             if (player1 != null)
             {
-                player1.keyDown(e);
+                if (e.KeyCode == Keys.Left)
+                {
+                    player1.GoLeft(true);
+                }
+                if (e.KeyCode == Keys.Right)
+                {
+                    player1.GoRight(true);
+                }
             }
             if (player2 != null)
             {
-                player2.keyDown(e);
+                if (e.KeyCode == Keys.A)
+                {
+                    player2.GoLeft(true);
+                }
+                if (e.KeyCode == Keys.D)
+                {
+                    player2.GoRight(true);
+                }
             }
         }
         public void keyUp(KeyEventArgs e)
         {
             if (player1 != null)
             {
-                player1.keyUp(e);
+                if (e.KeyCode == Keys.Left)
+                {
+                    player1.GoLeft(false);
+                }
+                if (e.KeyCode == Keys.Right)
+                {
+                    player1.GoRight(false);
+                }
+                if (e.KeyCode == Keys.Space)
+                {
+                    addBullet(player1);
+                };
             }
             if (player2 != null)
             {
-                player2.keyUp(e);
+                if (e.KeyCode == Keys.A)
+                {
+                    player2.GoLeft(false);
+                }
+                if (e.KeyCode == Keys.D)
+                {
+                    player2.GoRight(false);
+                }
+                if (e.KeyCode == Keys.Q)
+                {
+                    addBullet(player2);
+                }
+            }
+        }
+        private void addBullet(Player player)
+        {
+            if (!player.fullPower)
+              bullets.Add(  player.makeBullet("bullet"));
+            else
+            {
+               bullets.Add( player.makeBullet("bullet1"));
+               bullets.Add(player.makeBullet("bullet2"));
             }
         }
         public void movePowers()

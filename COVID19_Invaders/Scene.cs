@@ -21,10 +21,10 @@ namespace COVID19_Invaders
         {
             this.numPlayers = numPlayers;
             this.form = form;
-            player1 = new Player(form, 1);
+            player1 = new Player( 1, form.Width,form.Height);
             player2 = null;
             if (numPlayers == 2)
-                player2 = new Player(form, 2);
+                player2 = new Player(2, form.Width, form.Height);
             level = 1;
             score = 0;
             Level = new LittleInvadersLevel(numPlayers, form, player1, player2);
